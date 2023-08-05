@@ -21,7 +21,7 @@ export const FONDS = [
     title: 'RAZOM',
     url: 'https://www.razomforukraine.org/',
     img: null,
-    png: './img/supportUkraine/supportUkraine-4.png'
+    png: 'img/supportUkraine/supportUkraine-4.png'
   },
   {
     title: 'Action against hunger',
@@ -39,13 +39,13 @@ export const FONDS = [
     title: 'Medicins Sans Frontieres',
     url: 'https://www.msf.org/ukraine',
     img: null,
-    png: './img/supportUkraine/supportUkraine-1.png'
+    png: '../img/supportUkraine/supportUkraine-1.png'
   },
   {
     title: 'World vision',
     url: 'https://www.wvi.org/emergencies/ukraine',
     img: null,
-    png: './img/supportUkraine/supportUkraine-1.png'
+    png: '/img/supportUkraine/supportUkraine-1.png'
   },
   {
     title: 'UNITED24',
