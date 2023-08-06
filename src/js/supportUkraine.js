@@ -15,18 +15,19 @@ function createMarkup() {
         i + 1
       )
         .toString()
-        .padStart(
-          2,
-          'O'
-        )}</span><img class ="company-emblem" src="${obj.png}" alt="${obj.title}"></a></li>`
+        .padStart(2, 'O')}</span><picture class="company-emblem">
+        <source srcset="${obj.png} 1x, ${obj.png2x} 2x" type="image/png"/> 
+        <img src="${obj.png}" alt="${obj.title}" />
+        </picture></a></li>`
   ).join('');
-};
+}
 
 el.list.insertAdjacentHTML('beforeend', createMarkup());
 
 el.btn.addEventListener('click', handleDown);
 
-const { height: listItemHeight } = el.list.firstElementChild.getBoundingClientRect();
+const { height: listItemHeight } =
+  el.list.firstElementChild.getBoundingClientRect();
 
 function handleDown(e) {
   if (!e.currentTarget.firstElementChild.classList.contains('skroll-active')) {
@@ -40,7 +41,7 @@ function handleDown(e) {
       behavior: 'smooth',
     });
   }
-};
+}
 
 el.listContainer.addEventListener('scroll', handleOnScroll);
 
@@ -58,4 +59,4 @@ function handleOnScroll() {
       el.btn.firstElementChild.classList.add('skroll-active');
     }
   }
-};
+}
